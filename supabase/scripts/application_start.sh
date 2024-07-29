@@ -6,7 +6,7 @@ DOCKER_BASE_DIRECTORY=/clone-me-project/supabase/docker
 CLONE_ME_BASE_DIRECTORY=/clone-me-project/tmp
 
 cd $DOCKER_BASE_DIRECTORY
-python $CLONE_ME_BASE_DIRECTORY/scripts/add-migration-metadata.py
+python3 $CLONE_ME_BASE_DIRECTORY/scripts/add-migration-metadata.py
 mkdir -p $DOCKER_BASE_DIRECTORY/db/migrations
 cp -R $CLONE_ME_BASE_DIRECTORY/migrations $DOCKER_BASE_DIRECTORY/db
 cp -R $CLONE_ME_BASE_DIRECTORY/functions $DOCKER_BASE_DIRECTORY/volumes
