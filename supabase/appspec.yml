@@ -3,6 +3,7 @@ os: linux
 files:
   - source: /
     destination: /clone-me-project/supabase/supabase
+file_exists_behavior: OVERWRITE
 hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
