@@ -1,11 +1,3 @@
--- migrate:up
-
--- migrate:up
-
--- migrate:up
-
--- migrate:up
-
 DROP TYPE IF EXISTS errand_status CASCADE;
 
 CREATE TYPE errand_status AS enum (
@@ -96,12 +88,3 @@ CREATE TABLE
         file_type file_type,
         CONSTRAINT fk_errand_metadata FOREIGN KEY (errand_id) REFERENCES errand (id) ON DELETE CASCADE
 );
-
-
--- migrate:down
-
--- migrate:down
-
--- migrate:down
-
--- migrate:down

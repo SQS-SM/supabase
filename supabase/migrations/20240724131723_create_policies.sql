@@ -1,11 +1,3 @@
--- migrate:up
-
--- migrate:up
-
--- migrate:up
-
--- migrate:up
-
 ALTER TABLE storage.buckets ENABLE ROW LEVEL SECURITY;
 
 CREATE POLICY "Allow authenticated users to upload metadata"
@@ -60,12 +52,3 @@ create policy "Allow authenticated users to delete bucket objects"
     on "storage"."objects" for delete
     to authenticated
     using (auth.role() = 'authenticated' and bucket_id = 'errand_media'::text);
-
-
--- migrate:down
-
--- migrate:down
-
--- migrate:down
-
--- migrate:down
