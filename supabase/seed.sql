@@ -28,6 +28,7 @@ CREATE TABLE
         account_id VARCHAR(64) PRIMARY KEY,
         first_name VARCHAR(256) DEFAULT NULL,
         last_name VARCHAR(256) DEFAULT NULL,
+        preferred_name VARCHAR(256) DEFAULT NULL,
         date_of_birth DATE DEFAULT NULL,
         terms_accepted BOOLEAN DEFAULT FALSE,
         terms_accepted_date TIMESTAMP DEFAULT NULL,
