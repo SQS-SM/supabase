@@ -13,9 +13,9 @@ cp -R $CLONE_ME_BASE_DIRECTORY/functions $DOCKER_BASE_DIRECTORY/volumes
 cp $CLONE_ME_BASE_DIRECTORY/env-config/.env.dev .env
 
 echo "REFRESH DOCKER CONTAINER"
-docker-compose down -v
-rm -rf volumes/db/data/
-# docker-compose down
+# docker-compose down -v
+# rm -rf volumes/db/data/
+docker-compose down
 docker-compose up -d
 
 echo "STARTING THE DB MIGRATION"
