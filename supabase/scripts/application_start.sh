@@ -10,9 +10,9 @@ python3 $CLONE_ME_BASE_DIRECTORY/scripts/add-migration-metadata.py
 mkdir -p $DOCKER_BASE_DIRECTORY/db/migrations
 cp -R $CLONE_ME_BASE_DIRECTORY/migrations $DOCKER_BASE_DIRECTORY/db
 cp -R $CLONE_ME_BASE_DIRECTORY/functions $DOCKER_BASE_DIRECTORY/volumes
-cp $CLONE_ME_BASE_DIRECTORY/env-config/.env.dev .env
+python3 $CLONE_ME_BASE_DIRECTORY/scripts/env-update.py
 
-python3 $DOCKER_BASE_DIRECTORY/scripts/env-update.py
+cp $CLONE_ME_BASE_DIRECTORY/env-config/.env.dev .env
 
 echo "REFRESH DOCKER CONTAINER"
 # docker-compose down -v

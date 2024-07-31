@@ -26,7 +26,7 @@ def get_secret():
     return json.loads(secret)
 
 def set_secret():
-    dotenv_file = dotenv.find_dotenv('.env')
+    dotenv_file = dotenv.find_dotenv('../env-config/.env.dev')
     secret = get_secret() 
     for key in secret:
         value = secret[key]
