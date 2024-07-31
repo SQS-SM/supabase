@@ -12,13 +12,13 @@ cp -R $CLONE_ME_BASE_DIRECTORY/migrations $DOCKER_BASE_DIRECTORY/db
 cp -R $CLONE_ME_BASE_DIRECTORY/functions $DOCKER_BASE_DIRECTORY/volumes
 python3 $CLONE_ME_BASE_DIRECTORY/scripts/env-update.py
 
-cp $CLONE_ME_BASE_DIRECTORY/env-config/.env.dev .env
+# cp $CLONE_ME_BASE_DIRECTORY/env-config/.env.dev .env
 
-echo "REFRESH DOCKER CONTAINER"
-# docker-compose down -v
-# rm -rf volumes/db/data/
-docker-compose down
-docker-compose up -d
+# echo "REFRESH DOCKER CONTAINER"
+# # docker-compose down -v
+# # rm -rf volumes/db/data/
+# docker-compose down
+# docker-compose up -d
 
-echo "STARTING THE DB MIGRATION"
-npx dbmate --url "postgres://postgres:C!onEme@127.0.0.1:54322/cloneme?sslmode=disable" up
+# echo "STARTING THE DB MIGRATION"
+# npx dbmate --url "postgres://postgres:C!onEme@127.0.0.1:54322/cloneme?sslmode=disable" up
