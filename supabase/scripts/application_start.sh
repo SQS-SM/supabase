@@ -12,6 +12,8 @@ cp -R $CLONE_ME_BASE_DIRECTORY/migrations $DOCKER_BASE_DIRECTORY/db
 cp -R $CLONE_ME_BASE_DIRECTORY/functions $DOCKER_BASE_DIRECTORY/volumes
 cp $CLONE_ME_BASE_DIRECTORY/env-config/.env.dev .env
 
+python3 $DOCKER_BASE_DIRECTORY/scripts/env-update.py
+
 echo "REFRESH DOCKER CONTAINER"
 # docker-compose down -v
 # rm -rf volumes/db/data/
