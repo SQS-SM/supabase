@@ -17,13 +17,13 @@ pip install python-dotenv
 python3 ./env-update.py
 cd $DOCKER_BASE_DIRECTORY
 
-# cp $CLONE_ME_BASE_DIRECTORY/env-config/.env.dev .env
+cp $CLONE_ME_BASE_DIRECTORY/env-config/.env.dev .env
 
-# echo "REFRESH DOCKER CONTAINER"
-# # docker-compose down -v
-# # rm -rf volumes/db/data/
-# docker-compose down
-# docker-compose up -d
+echo "REFRESH DOCKER CONTAINER"
+# docker-compose down -v
+# rm -rf volumes/db/data/
+docker-compose down
+docker-compose up -d
 
-# echo "STARTING THE DB MIGRATION"
-# npx dbmate --url "postgres://postgres:C!onEme@127.0.0.1:54322/cloneme?sslmode=disable" up
+echo "STARTING THE DB MIGRATION"
+npx dbmate --url "postgres://postgres:C!onEme@127.0.0.1:54322/cloneme?sslmode=disable" up
