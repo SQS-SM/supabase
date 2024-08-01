@@ -11,6 +11,7 @@ mkdir -p $DOCKER_BASE_DIRECTORY/db/migrations
 cp -R $CLONE_ME_BASE_DIRECTORY/migrations $DOCKER_BASE_DIRECTORY/db
 cp -R $CLONE_ME_BASE_DIRECTORY/functions $DOCKER_BASE_DIRECTORY/volumes
 cp -R $CLONE_ME_BASE_DIRECTORY/docker $DOCKER_BASE_DIRECTORY
+cp $CLONE_ME_BASE_DIRECTORY/docker/docker-compose.yml $DOCKER_BASE_DIRECTORY/docker-compose.yml
 cd $CLONE_ME_BASE_DIRECTORY/scripts
 pip install boto3
 pip install python-dotenv
