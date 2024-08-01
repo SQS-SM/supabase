@@ -26,4 +26,4 @@ docker-compose down
 docker-compose up -d
 
 echo "STARTING THE DB MIGRATION"
-npx dbmate --url "postgres://postgres:C!onEme@127.0.0.1:54322/cloneme?sslmode=disable" up
+npx dbmate up
