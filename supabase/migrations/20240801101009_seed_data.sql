@@ -5,7 +5,6 @@ VALUES
     (2, 'runner', 'Person doing the errands'),
     (3, 'admin', 'System Administrator');
 
---bucket for errands
 INSERT INTO
     storage.buckets (id, name, public, allowed_mime_types)
 VALUES
